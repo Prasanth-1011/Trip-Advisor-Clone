@@ -1,0 +1,622 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Advisor</title>
+    <link rel="shortcut icon" href="./Assets/Trip_Advisor.png" type="image/png">
+    <link rel="stylesheet" href="./Styles/Index.css">
+    <link rel="stylesheet" href="./Styles/Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header align-center">
+        <i class="fas fa-bars header__menu"></i>
+        <a class="header__title align-center" href="Home.html">
+            <img class="header__logo" src="./Assets/App_Logo.png" alt="Logo">
+            <h1 class="header__title__trip">Trip</h1>
+            <h1 class="header__title__advisor">Advisor</h1>
+        </a>
+
+        <div class="header__search align-center">
+            <input class="header__search__input" type="text" placeholder="Search destinations, hotels, restaurants">
+            <i class="fas fa-search search__icon"></i>
+        </div>
+
+        <nav class="header__navbar">
+            <li><a href="#" class="nav-link" tabindex="1">Home</a></li>
+            <li><a href="#destinations" class="nav-link" tabindex="2">Destinations</a></li>
+            <li><a href="#hotels" class="nav-link" tabindex="3">Hotels</a></li>
+            <li><a href="#restaurants" class="nav-link" tabindex="4">Restaurants</a></li>
+            <li><a href="#travel" class="nav-link" tabindex="5">Travel Guides</a></li>
+        </nav>
+
+        <button class="header__login" type="button">Login</button>
+
+    </header>
+
+    <section class="header__cover"></section>
+
+    <main class="container">
+        <section class="container__image flex-center">
+            <img class="container__image__background" src="./Assets/Bali_Indonesia.jpg" alt="">
+            <div class="container__image__content flex-center">
+                <h1>Discover Your Next Adventure</h1>
+                <h3>
+                    Find the best hotels, restaurants, and activities around the world with our trusted travel community
+                </h3>
+                <span>
+                    <a href="#hotels"><input type="button" class="find__hotels" value="Find Hotels"></a>
+                    <input type="button" class="explore__restaurants" value="Explore Restaurants">
+                </span>
+            </div>
+        </section>
+
+        <section class="feature" id="destinations">
+            <h1 class="feature__title">Featured Destinations</h1>
+            <p class="feature__underline">Featured Destinations</p>
+
+            <div class="feature__container">
+                <div class="feature__item">
+                    <img src="https://www.agoda.com/wp-content/uploads/2024/04/Featured-image-Cathedral-of-the-Holy-Cross-and-Saint-Eulalia-Gothic-Quarter-Barcelona-Spain.jpg"
+                        alt="Barcelona's Finest Tourist Attraction">
+                    <div class="feature__item__content">
+                        <h3>Barcelona, Spain</h3>
+                        <span class="feature__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Barcelona is an artistic city known for its architecture, beaches, and rich catalan culture.
+                        </p>
+                        <h4>From ₹7000 Per Adult</h4>
+                    </div>
+                </div>
+
+                <div class="feature__item">
+                    <img src="https://images6.alphacoders.com/386/386861.jpg" alt="Tokyo Tower">
+                    <div class="feature__item__content">
+                        <h3>Tokyo, Japan</h3>
+                        <span class="feature__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>4.7</p>
+                        </span>
+                        <p>
+                            A vibrant blend of traditional culture and futuristic technology awaits in Tokyo.
+                        </p>
+                        <h4>From ₹6000 Per Adult</h4>
+                    </div>
+                </div>
+
+                <div class="feature__item">
+                    <img src="https://www.goindigo.in/content/dam/s6web/in/en/assets/Destinations/international/paris/Eiffel%20Tower.jpg"
+                        alt="Paris Eiffel Tower">
+                    <div class="feature__item__content">
+                        <h3>Paris, France</h3>
+                        <span class="feature__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            The city of lights offers iconic landmarks, world-class cuisine, and romantic ambiance.
+                        </p>
+                        <h4>From ₹7000 Per Adult</h4>
+                    </div>
+                </div>
+
+                <div class="feature__item">
+                    <img src="./Assets/Bali_Indonesia.jpg" alt="Image of barcelona's finest tourist attraction">
+                    <div class="feature__item__content">
+                        <h3>Bali, Indonesia</h3>
+                        <span class="feature__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>4.5</p>
+                        </span>
+                        <p>
+                            Tropical paradise with stunning beaches, lush rice terraces, and spiritual retreats.
+                        </p>
+                        <h4>From ₹3500 Per Adult</h4>
+                    </div>
+                </div>
+
+                <div class="feature__item">
+                    <img src="https://www.tui.com/blog/wp-content/uploads/2024/12/new-york-sehenswuerdigkeiten-statue-of-liberty-header-adobestock-110248415-dwp.jpg"
+                        alt="Liberty Statue">
+                    <div class="feature__item__content">
+                        <h3>New York, America</h3>
+                        <span class="feature__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            The city that never sleeps offers endless entertainment, dining, and cultural experiences.
+                        </p>
+                        <h4>From ₹5000 Per Adult</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Hotel -->
+        <section class="filter flex-center" id="hotels">
+            <div class="filter__gap">Gap</div>
+            <div class="filter__container flex-center">
+                <div class="filter__inputs">
+                    <h4>Destination</h4>
+                    <input type="text" placeholder="Enter Destination">
+                </div>
+                <div class="filter__inputs">
+                    <h4>Check-in</h4>
+                    <input type="datetime-local">
+                </div>
+                <div class="filter__inputs">
+                    <h4>Check-out</h4>
+                    <input type="datetime-local">
+                </div>
+                <div class="filter__inputs">
+                    <h4>Guests</h4>
+                    <select name="Guests">
+                        <option value="1">1 Guests</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter__inputs alignment">
+                <h4>Price Range</h4>
+                <input type="range" id="price" name="Price" value="5000" min="3500" max="8000">
+                <div id="value">5000</div>
+            </div>
+
+            <input class="filter__button" type="button" value="Search Hotels">
+        </section>
+
+        <section class="hotels">
+            <h1 class="hotels__title">Popular Hotels</h1>
+            <p class="hotels__underline">Featured Destinations</p>
+
+            <div class="hotels__container">
+                <div class="hotels__item">
+                    <img src="https://t4.ftcdn.net/jpg/00/76/39/81/360_F_76398172_OmdTtFD0Phm3cRevlfzmmblRSNLvCWVQ.jpg"
+                        alt="Grand Palace - Paris">
+                    <div class="hotels__item__content">
+                        <h3>Grand Palace Hotel</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Paris, France
+                        </p>
+                        <span class="hotels__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Luxury hotel in the heart of Paris with stunning views of the Eiffel Tower.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hotels__item">
+                    <img src="https://images.trvl-media.com/lodging/19000000/18080000/18071000/18070996/d6970654.jpg?impolicy=fcrop&w=1200&h=800&quality=medium"
+                        alt="Sakura Gardens">
+                    <div class="hotels__item__content">
+                        <h3>Sakura Gardens</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Tokyo, Japan
+                        </p>
+                        <span class="hotels__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Traditional Japanese ryokan with modern amenities and beautiful garden views.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hotels__item">
+                    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/698913510.jpg?k=acc768b7acf2614de2f968caa34622f6b0919d87c28b7ecb8a9fbb651d86effe&o="
+                        alt="Oceanview Resort">
+                    <div class="hotels__item__content">
+                        <h3>Oceanview Resort</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Bali, Indonesia
+                        </p>
+                        <span class="hotels__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Beachfront resort with private villas, infinity pool, facilities and services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hotels__item">
+                    <img src="https://media.timeout.com/images/103619877/1920/1080/image.webp"
+                        alt="Metropolitan Suites">
+                    <div class="hotels__item__content">
+                        <h3>Metropolitan Suites</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> New York, America
+                        </p>
+                        <span class="hotels__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Modern hotel in Manhattan with spacious suites and panoramic city views.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hotels__item">
+                    <img src="https://www.skiinluxury.com/attachments/photos/gallery/64873a3d-aa8c-4ac0-a445-2a520a000f09.jpg"
+                        alt="Alpine Retreat Hotel">
+                    <div class="hotels__item__content">
+                        <h3>Alpine Retreat</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Swiss Alps, Switzerland
+                        </p>
+                        <span class="hotels__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Cozy mountain lodge with fireplace, ski-in/ski-out access, and hot tub.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuisines -->
+        <section class="cuisines" id="restaurants">
+            <h1 class="cuisines__title">Popular Cuisines</h1>
+            <p class="cuisines__underline">Featured Destinations</p>
+
+            <div class="cuisines__grid">
+                <div class="cuisines__grid__item flex-center">
+                    <i class="fas fa-utensils"></i>
+                    <h3>All</h3>
+                </div>
+
+                <div class="cuisines__grid__item flex-center">
+                    <i class="fas fa-pizza-slice"></i>
+                    <h3>Italian</h3>
+                </div>
+
+                <div class="cuisines__grid__item flex-center">
+                    <i class="fas fa-bread-slice"></i>
+                    <h3>French</h3>
+                </div>
+
+                <div class="cuisines__grid__item flex-center">
+                    <i class="fas fa-fish"></i>
+                    <h3>Japanese</h3>
+                </div>
+
+                <div class="cuisines__grid__item flex-center">
+                    <i class="fas fa-mortar-pestle"></i>
+                    <h3>Indian</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurants -->
+        <section class="restaurants">
+            <h1 class="restaurants__title">Popular Restaurants</h1>
+            <p class="restaurants__underline">Featured Destinations</p>
+
+            <div class="restaurants__container">
+                <div class="restaurants__item">
+                    <img src="https://t4.ftcdn.net/jpg/00/76/39/81/360_F_76398172_OmdTtFD0Phm3cRevlfzmmblRSNLvCWVQ.jpg"
+                        alt="Grand Palace - Paris">
+                    <div class="restaurants__item__content">
+                        <h3>Grand Palace Hotel</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Paris, France
+                        </p>
+                        <span class="restaurants__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Luxury hotel in the heart of Paris with stunning views of the Eiffel Tower.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="restaurants__item">
+                    <img src="https://images.trvl-media.com/lodging/19000000/18080000/18071000/18070996/d6970654.jpg?impolicy=fcrop&w=1200&h=800&quality=medium"
+                        alt="Sakura Gardens">
+                    <div class="restaurants__item__content">
+                        <h3>Sakura Gardens</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Tokyo, Japan
+                        </p>
+                        <span class="restaurants__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Traditional Japanese ryokan with modern amenities and beautiful garden views.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="restaurants__item">
+                    <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/698913510.jpg?k=acc768b7acf2614de2f968caa34622f6b0919d87c28b7ecb8a9fbb651d86effe&o="
+                        alt="Oceanview Resort">
+                    <div class="restaurants__item__content">
+                        <h3>Oceanview Resort</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Bali, Indonesia
+                        </p>
+                        <span class="restaurants__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Beachfront resort with private villas, infinity pool, facilities and services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="restaurants__item">
+                    <img src="https://media.timeout.com/images/103619877/1920/1080/image.webp"
+                        alt="Metropolitan Suites">
+                    <div class="restaurants__item__content">
+                        <h3>Metropolitan Suites</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> New York, America
+                        </p>
+                        <span class="restaurants__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Modern hotel in Manhattan with spacious suites and panoramic city views.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="restaurants__item">
+                    <img src="https://www.skiinluxury.com/attachments/photos/gallery/64873a3d-aa8c-4ac0-a445-2a520a000f09.jpg"
+                        alt="Alpine Retreat Hotel">
+                    <div class="restaurants__item__content">
+                        <h3>Alpine Retreat</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i> Swiss Alps, Switzerland
+                        </p>
+                        <span class="restaurants__rating align-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <p>5.0</p>
+                        </span>
+                        <p>
+                            Cozy mountain lodge with fireplace, ski-in/ski-out access, and hot tub.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Modes -->
+        <section class="travel" id="travel">
+            <h1 class="travel__title">Travel Modes</h1>
+            <p class="travel__underline">Featured Destinations</p>
+
+            <div class="travel__grid">
+                <div class="travel__grid__item flex-center">
+                    <i class="fas fa-plane"></i>
+                    <h3>Flights</h3>
+                    <p>Find the best flight deals to your dream destinations with our comprehensive search.</p>
+                </div>
+
+                <div class="travel__grid__item flex-center">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Hotels</h3>
+                    <p>Discover accommodations for every budget, from luxury resorts to cozy hostels.</p>
+                </div>
+
+                <div class="travel__grid__item flex-center">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Restaurants</h3>
+                    <p>Explore culinary delights with reviews from our global community of food lovers.</p>
+                </div>
+
+                <div class="travel__grid__item flex-center">
+                    <i class="fas fa-car"></i>
+                    <h3>Car Rentals</h3>
+                    <p>Explore culinary delights with reviews from our global community of food lovers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Partners -->
+        <section class="partners">
+            <h1 class="partners__title">Our Travel Partners</h1>
+            <p class="partners__underline">Featured Destinations</p>
+            <div class="partners__container flex-center">
+                <img src="https://static.vecteezy.com/system/resources/previews/014/414/710/non_2x/fly-emirates-logo-on-transparent-background-free-vector.jpg"
+                    alt="Fly Emirates - Airline Partner" class="partners__image">
+                <img src="https://seekvectorlogo.com/wp-content/uploads/2018/01/grand-hyatt-vector-logo.png"
+                    alt="Grand Hyatt - Hotel Partner" class="partners__image">
+                <img src="./Assets/Uber_Logo.png" alt="Uber - Car Rental Partner" class="partners__image">
+                <img src="./Assets/Expedia-Logo-2021.png" alt="Expedia - Tour Guide Partner" class="partners__image">
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer__container flex-center">
+                <div class="footer__trip">
+                    <p>Your trusted companion for discovering the world's best travel experiences.</p>
+                    <div class="icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-pinterest"></i>
+                        <i class="fab fa-whatsapp"></i>
+
+                    </div>
+                </div>
+
+                <div class="footer__explore">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li>Hotels</li>
+                        <li>Restaurants</li>
+                        <li>Flights</li>
+                        <li>Vacation Rentals</li>
+                        <li>Things to Do</li>
+                    </ul>
+                </div>
+
+                <div class="footer__about">
+                    <h3>About Us</h3>
+                    <ul class="footer-links">
+                        <li>About Trip Advisor</li>
+                        <li>Press</li>
+                        <li>Resources</li>
+                        <li>Careers</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+
+                <div class="footer__support">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li>Help Center</li>
+                        <li>Safety Information</li>
+                        <li>Cancellation Options</li>
+                        <li>Support</li>
+                        <li>Trust & Safety</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; 2025 Trip Advisor. All Rights Reserved</p>
+            </div>
+        </footer>
+    </main>
+
+
+
+    <script>
+        const priceRange = document.getElementById('price');
+        const priceValue = document.getElementById('value');
+
+        priceRange.addEventListener('input', function () {
+            priceValue.textContent = priceRange.value;
+        });
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+
+</html>

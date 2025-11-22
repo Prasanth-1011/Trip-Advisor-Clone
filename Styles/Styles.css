@@ -1,0 +1,197 @@
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .header__search {
+        width: 25%;
+    }
+
+    .header__navbar {
+        gap: 1rem;
+        font-size: small;
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .feature__container,
+    .hotels__container,
+    .restaurants__container {
+        grid-template-columns: repeat(3, 18rem);
+    }
+
+    .feature__item img,
+    .hotels__item img,
+    .restaurants__item img {
+        height: 12rem;
+    }
+
+    .partners__container {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 1rem;
+    }
+
+    i.header__menu {
+        color: white;
+        display: block;
+        font-size: x-large;
+    }
+
+    .header__navbar {
+        display: none;
+    }
+
+    .header__search {
+        width: 40%;
+    }
+
+    .container {
+        height: 20rem;
+    }
+
+    .container__image__content h1 {
+        font-size: x-large;
+    }
+
+    .container__image__content h3 {
+        font-size: large;
+    }
+
+    .feature {
+        padding: 3rem 0 0;
+    }
+
+    .feature__container,
+    .hotels__container,
+    .restaurants__container {
+        grid-template-columns: repeat(2, 20rem);
+    }
+
+    .filter__container {
+        flex-wrap: wrap;
+    }
+
+    .filter__container .filter__inputs {
+        flex: 0 0 40%;
+    }
+
+    .hotels__container {
+        padding: 5rem 0 0;
+    }
+
+    .cuisines,
+    .restaurants,
+    .travel {
+        padding: 5rem 0 0;
+    }
+
+    .cuisines__grid {
+        grid-template-columns: repeat(3, 10rem);
+    }
+
+    .travel__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners__container {
+        flex-wrap: wrap;
+    }
+
+    .partners__image {
+        flex: 0 0 50%;
+    }
+
+    .footer__container {
+        flex-wrap: wrap;
+    }
+
+    .footer__trip,
+    .footer__explore,
+    .footer__about,
+    .footer__support {
+        padding: 1rem 4rem 1rem;
+        flex: 0 0 40%;
+    }
+
+    .footer__trip p {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header__logo {
+        padding-right: 0.5rem;
+    }
+
+    .header__title {
+        font-size: small;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .feature__container,
+    .cuisines {
+        padding: 3rem 0 0;
+    }
+
+    .feature__container,
+    .hotels__container,
+    .restaurants__container {
+        padding: 3rem 0 0;
+        grid-template-columns: repeat(1, 20rem);
+    }
+
+    .filter__container .filter__inputs {
+        flex: 0 0 30%;
+    }
+
+    .cuisines__grid {
+        grid-template-columns: repeat(2, 10rem);
+    }
+
+    .cuisines__grid__item,
+    .travel__grid__item {
+        padding: 1rem;
+    }
+
+    .travel__grid__item h3,
+    .travel__grid__item p {
+        font-size: small !important;
+    }
+
+    .footer__container {
+        padding: 0 0 3rem;
+        gap: 1rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer__trip {
+        flex: 0 0 80% !important;
+    }
+
+    .flex__trip p {
+        width: 20rem !important;
+        font-size: small;
+    }
+
+    .footer__explore,
+    .footer__about,
+    .footer__support {
+        padding: 1rem;
+        flex: 0 0 30%;
+        font-size: small;
+    }
+
+    .footer__trip p {
+        font-size: medium;
+    }
+}

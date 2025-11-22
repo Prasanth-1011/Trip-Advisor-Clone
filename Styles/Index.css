@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #00EB5B;
+    --primary-background: #121212;
+    --secondary-background: #1E1E1E;
+    --card-background: #252525;
+}
+
+/* Utility Classes */
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base Syles */
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--primary-background);
+}
+
+/* Header */
+.header {
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    z-index: 100;
+    gap: 2rem;
+    justify-content: space-evenly;
+    background-color: var(--secondary-background);
+}
+
+i.header__menu {
+    display: none;
+}
+
+.header__logo {
+    width: 3rem;
+}
+
+.header__cover {
+    width: 100%;
+    min-height: 5rem;
+}
+
+.header__logo {
+    border-radius: 100%;
+}
+
+.header__logo:hover {
+    transform: rotate(360deg);
+    transition: 600ms;
+}
+
+.header__title {
+    color: white;
+    text-decoration: none;
+}
+
+.header__title__advisor {
+    color: var(--primary-color);
+}
+
+.header__search {
+    width: 30%;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    justify-content: space-between;
+    background-color: var(--primary-background);
+}
+
+.header__search:focus-within {
+    border: 2px solid white;
+}
+
+.header__search__input {
+    width: 85%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: medium;
+    padding: 0 0.75rem;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.search__icon {
+    color: white;
+    padding: 0.75rem;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    transition: 0s;
+}
+
+.search__icon:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+    background-color: red;
+    transition: 600ms;
+}
+
+.header__navbar {
+    color: white;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.header__navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 600ms ease, padding 200ms ease;
+    position: relative;
+}
+
+.header__navbar a:hover,
+.header__navbar a:focus,
+.header__navbar a:active {
+    color: red;
+}
+
+.header__navbar a:focus {
+    outline: none;
+}
+
+.header__navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.25rem;
+    background: orange;
+    transition: width 600ms ease;
+}
+
+.header__navbar a:hover::after,
+.header__navbar a:focus::after,
+.header__navbar a:active::after {
+    width: 100%;
+}
+
+.header__login,
+.filter__button {
+    border: none;
+    scale: 0.95;
+    padding: 0.75rem;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    transition: 300ms ease-in-out;
+}
+
+.header__login:hover,
+.filter__button:hover {
+    background-color: red;
+    transition: 300ms ease-in-out;
+}
+
+/* Main */
+.container {
+    width: 100vw;
+    height: 40rem;
+    position: relative;
+}
+
+.container__image {
+    height: 100%;
+}
+
+.container__image__background,
+.container__image__content.flex-center {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+}
+
+.container__image__background {
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.container__image__content {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    flex-direction: column;
+}
+
+.container__image__content h1 {
+    font-size: xxx-large;
+}
+
+.container__image__content h3 {
+    text-align: center;
+    opacity: 0.75;
+    font-weight: 400;
+    padding: 2rem 0 3rem;
+}
+
+.find__hotels,
+.explore__restaurants {
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.75rem;
+    margin: 0 0.75rem;
+    font-size: medium;
+    border-radius: 0.5rem;
+    transition: 500ms;
+}
+
+.find__hotels {
+    border: none;
+    background-color: var(--primary-color);
+}
+
+.explore__restaurants {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.find__hotels:hover {
+    transition: 500ms;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.explore__restaurants:hover {
+    transition: 500ms;
+    border: none;
+    background-color: var(--primary-color);
+}
+
+/* Section Titles */
+.feature__title,
+.filter__title,
+.hotels__title,
+.restaurants__title,
+.travel__title,
+.cuisines__title,
+.partners__title {
+    margin: auto;
+    color: white;
+    width: fit-content;
+}
+
+.feature__underline,
+.filter__underline,
+.hotels__underline,
+.restaurants__underline,
+.travel__underline,
+.cuisines__underline,
+.partners__underline {
+    margin: auto;
+    width: fit-content;
+    color: transparent;
+    font-size: xx-small;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+/* Featured Destinations */
+.feature {
+    width: 100vw;
+    padding: 8rem 0 0;
+}
+
+.feature__container {
+    padding: 5rem 0 0;
+}
+
+.feature__container,
+.hotels__container,
+.restaurants__container {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 25rem);
+}
+
+.feature__item img,
+.hotels__item img,
+.restaurants__item img {
+    width: 100%;
+    height: 15rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.feature__item,
+.hotels__item,
+.restaurants__item {
+    color: white;
+    background-color: var(--card-background);
+    border: none;
+    border-radius: 1rem;
+    transition: scale 300ms ease-in-out;
+}
+
+.feature__item:hover,
+.hotels__item:hover,
+.restaurants__item:hover {
+    scale: 1.025;
+    transition: 300ms ease-in-out;
+}
+
+.feature__item__content,
+.hotels__item__content,
+.restaurants__item__content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 2rem 0.5rem;
+    padding-right: 1rem;
+}
+
+.feature__rating,
+.hotels__rating,
+.restaurants__rating {
+    color: gold;
+}
+
+.feature__rating p,
+.hotels__rating p,
+.restaurants__rating p {
+    padding: 0 0.5rem;
+    font-size: medium !important;
+    font-weight: 400 !important;
+}
+
+.feature__item__content p,
+.hotels__item__content p,
+.restaurants__item__content p {
+    font-size: small;
+    font-weight: 100;
+}
+
+.feature__item__content h4 {
+    color: var(--primary-color);
+}
+
+/* Filter Section */
+.filter {
+    width: 100%;
+    padding: 0 0 3rem;
+    color: white;
+    flex-direction: column;
+    background-color: var(--card-background);
+}
+
+.filter__gap {
+    width: 100%;
+    padding: 2rem 0;
+    color: transparent;
+    background-color: var(--primary-background);
+}
+
+.filter__container.flex-center {
+    width: 100%;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.filter__inputs {
+    display: block;
+    flex: 0 0 20%;
+}
+
+.filter__inputs div {
+    padding-top: 1rem;
+}
+
+.filter__inputs input,
+.filter__inputs select {
+    width: 100%;
+    color: white;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+.filter__inputs select option {
+    color: black;
+}
+
+.filter__inputs input::placeholder {
+    color: white;
+}
+
+.filter__inputs.alignment {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter__inputs.alignment input {
+    margin: 0;
+}
+
+.filter__inputs.alignment div {
+    padding: 0;
+}
+
+.filter__button {
+    margin: 1rem 0 0;
+}
+
+/* Popular Hotels */
+.hotels {
+    padding: 5rem 0;
+}
+
+/* Restaurants */
+.restaurants__container {
+    padding: 5rem 0 0;
+}
+
+/* Travel Modes */
+.travel,
+.cuisines {
+    padding: 8rem 0rem 0rem;
+}
+
+.travel__title {
+    padding: 0;
+}
+
+.travel__grid,
+.cuisines__grid {
+    display: grid;
+    align-items: center;
+    padding: 3rem 0;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.travel__grid {
+    padding: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: stretch;
+}
+
+.cuisines__grid {
+    grid-template-columns: repeat(5, 10rem);
+}
+
+.travel__grid__item,
+.cuisines__grid__item {
+    color: white;
+    gap: 0.5rem;
+    padding: 3rem 2rem;
+    flex-direction: column;
+    border-radius: 1rem;
+    transition: 300ms ease-in-out;
+    background-color: var(--secondary-background);
+}
+
+.cuisines__grid__item {
+    padding: 2rem !important;
+}
+
+.travel__grid__item i,
+.cuisines__grid__item i {
+    color: var(--primary-color);
+    font-size: xxx-large;
+}
+
+.travel__grid__item h3,
+.cuisines__grid__item h3 {
+    margin-top: 2rem;
+}
+
+.travel__grid__item p {
+    text-align: center;
+    font-size: medium;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.travel__grid__item:hover,
+.cuisines__grid__item:hover,
+.partners__image:hover {
+    transform: translateY(-1rem);
+    transition: 300ms ease-in-out;
+}
+
+/* Travel Partners */
+.partners {
+    padding: 1rem 0;
+}
+
+.partners__container {
+    padding: 3rem 0;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.partners__image {
+    max-width: 18rem;
+    height: 10rem;
+    padding: 1rem;
+    object-fit: contain;
+    border-radius: 1rem;
+    background-color: white;
+    transition: 300ms ease-in-out;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    color: white;
+}
+
+.footer__container {
+    width: 100%;
+    gap: 3rem;
+}
+
+.footer__container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.footer__trip,
+.footer__explore,
+.footer__about,
+.footer__support {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    flex: 0 0 18%;
+}
+
+.footer__trip p {
+    padding: 1.25rem;
+    width: 10rem;
+    font-size: small;
+    font-weight: 100 !important;
+}
+
+.footer__trip .icons {
+    display: flex;
+    gap: 1rem;
+    font-size: large !important;
+}
+
+.footer__container li:hover,
+.footer__container i:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer__container i:hover {
+    text-decoration: none;
+}
+
+.footer__copyright {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    align-content: center;
+}
