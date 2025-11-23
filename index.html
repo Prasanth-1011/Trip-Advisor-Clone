@@ -1,69 +1,83 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Advisor</title>
-    <link rel="shortcut icon" href="./Assets/Trip_Advisor.png" type="image/png">
-    <link rel="stylesheet" href="./Styles/Index.css">
     <link rel="stylesheet" href="./Styles/Styles.css">
+    <link rel="stylesheet" href="./Styles/Responsiveness.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
 </head>
 
 <body>
-    <header class="header align-center">
-        <i class="fas fa-bars header__menu"></i>
-        <a class="header__title align-center" href="index.html">
-            <img class="header__logo" src="./Assets/App_Logo.png" alt="Logo">
-            <h1 class="header__title__trip">Trip</h1>
-            <h1 class="header__title__advisor">Advisor</h1>
-        </a>
+    <header class="header">
+        <div class="header__laptop align-center">
+            <a class="header__logo align-center" href="index.html">
+                <img class="header__logo__image" src="./Assets/Trip_Advisor.png" alt="">
+                <h2>Trip Advisor</h1>
+            </a>
 
-        <div class="header__search align-center">
-            <input class="header__search__input" type="text" placeholder="Search destinations, hotels, restaurants">
-            <i class="fas fa-search search__icon"></i>
+            <div class="header__search align-center">
+                <span class="material-symbols-outlined search">search</span>
+                <input class="header__search__input" type="text" placeholder="Search Places, Hotels, Restaurants">
+                <button class="header__search__button" type="button">Search</button>
+            </div>
+
+            <nav class="header__navbar">
+                <a href="index.html">Home</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#hotels">Hotels</a>
+                <a href="#restaurants">Restaurants</a>
+                <a href="#travel">Travels</a>
+            </nav>
+
+            <button class="header__login" type="button">Login</button>
         </div>
 
-        <nav class="header__navbar">
-            <li><a href="#" class="nav-link" tabindex="1">Home</a></li>
-            <li><a href="#destinations" class="nav-link" tabindex="2">Destinations</a></li>
-            <li><a href="#hotels" class="nav-link" tabindex="3">Hotels</a></li>
-            <li><a href="#restaurants" class="nav-link" tabindex="4">Restaurants</a></li>
-            <li><a href="#travel" class="nav-link" tabindex="5">Travel Guides</a></li>
-        </nav>
-
-        <button class="header__login" type="button">Login</button>
-
+        <div class="header__mobile flex-center">
+            <a href="index.html">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#hotels">Hotels</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="#travel">Travels</a>
+        </div>
     </header>
 
-    <section class="header__cover"></section>
+    <div class="header__gap"></div>
 
-    <main class="container">
-        <section class="container__image flex-center">
-            <img class="container__image__background" src="./Assets/Bali_Indonesia.jpg" alt="">
-            <div class="container__image__content flex-center">
-                <h1>Discover Your Next Adventure</h1>
-                <h3>
-                    Find the best hotels, restaurants, and activities around the world with our trusted travel community
-                </h3>
-                <span>
-                    <a href="#hotels"><input type="button" class="find__hotels" value="Find Hotels"></a>
-                    <a href="#restaurants">
-                        <input type="button" class="explore__restaurants" value="Explore Restaurants">
-                    </a>
-                </span>
+    <main>
+        <section class="intro">
+            <div class="intro__contents align-center">
+                <div class="intro__image">
+                    <img src="./Assets/Bali_Indonesia.jpg" alt="">
+                    <p class="photographer">@John</p>
+                </div>
+                <span class="intro__line"></span>
+                <div class="intro__text flex-center">
+                    <h1>Discover Your Next Adventure</h1>
+                    <h3>
+                        Find the best hotels, restaurants, and activities around the world with our trusted travel
+                        community
+                    </h3>
+                    <span class="intro__text__buttons">
+                        <a href="#hotels"><input type="button" class="find__hotels" value="Find Hotels"></a>
+                        <a href="#restaurants">
+                            <input type="button" class="explore__restaurants" value="Explore Restaurants">
+                        </a>
+                    </span>
+                </div>
             </div>
         </section>
 
         <section class="feature" id="destinations">
-            <div class="fixed__gap">Gap</div>
+            <!-- <div class="fixed__gap">Gap</div> -->
             <div class="fixed__gap">Gap</div>
             <h1 class="feature__title">Featured Destinations</h1>
             <p class="feature__underline">Featured Destinations</p>
@@ -327,7 +341,6 @@
         <!-- Cuisines -->
         <section class="cuisines" id="restaurants">
             <div class="fixed__gap">Gap</div>
-            <div class="fixed__gap">Gap</div>
             <h1 class="cuisines__title">Popular Cuisines</h1>
             <p class="cuisines__underline">Featured Destinations</p>
 
@@ -524,59 +537,59 @@
                 <img src="./Assets/Expedia-Logo-2021.png" alt="Expedia - Tour Guide Partner" class="partners__image">
             </div>
         </section>
-
-        <footer>
-            <div class="footer__container flex-center">
-                <div class="footer__trip">
-                    <p>Your trusted companion for discovering the world's best travel experiences.</p>
-                    <div class="icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-pinterest"></i>
-                        <i class="fab fa-whatsapp"></i>
-
-                    </div>
-                </div>
-
-                <div class="footer__explore">
-                    <h3>Explore</h3>
-                    <ul class="footer-links">
-                        <li>Hotels</li>
-                        <li>Restaurants</li>
-                        <li>Flights</li>
-                        <li>Vacation Rentals</li>
-                        <li>Things to Do</li>
-                    </ul>
-                </div>
-
-                <div class="footer__about">
-                    <h3>About Us</h3>
-                    <ul class="footer-links">
-                        <li>About Trip Advisor</li>
-                        <li>Press</li>
-                        <li>Resources</li>
-                        <li>Careers</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-
-                <div class="footer__support">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li>Help Center</li>
-                        <li>Safety Information</li>
-                        <li>Cancellation Options</li>
-                        <li>Support</li>
-                        <li>Trust & Safety</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__copyright">
-                <p>&copy; 2025 Trip Advisor. All Rights Reserved</p>
-            </div>
-        </footer>
     </main>
+
+    <footer>
+        <div class="footer__container flex-center">
+            <div class="footer__trip">
+                <p>Your trusted companion for discovering the world's best travel experiences.</p>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-whatsapp"></i>
+
+                </div>
+            </div>
+
+            <div class="footer__explore">
+                <h3>Explore</h3>
+                <ul class="footer-links">
+                    <li>Hotels</li>
+                    <li>Restaurants</li>
+                    <li>Flights</li>
+                    <li>Vacation Rentals</li>
+                    <li>Things to Do</li>
+                </ul>
+            </div>
+
+            <div class="footer__about">
+                <h3>About Us</h3>
+                <ul class="footer-links">
+                    <li>About Trip Advisor</li>
+                    <li>Press</li>
+                    <li>Resources</li>
+                    <li>Careers</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="footer__support">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li>Help Center</li>
+                    <li>Safety Information</li>
+                    <li>Cancellation Options</li>
+                    <li>Support</li>
+                    <li>Trust & Safety</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; 2025 Trip Advisor. All Rights Reserved</p>
+        </div>
+    </footer>
 
     <script>
         const priceRange = document.getElementById('price');

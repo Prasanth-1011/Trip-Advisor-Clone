@@ -1,208 +1,509 @@
-/* Media Queries */
-
-@media screen and (max-width: 1024px) {
-    .header__search {
-        width: 25%;
-    }
-
-    .header__navbar {
-        gap: 1rem;
-        font-size: small;
-    }
-
-    .container {
-        height: 100%;
-    }
-
-    .feature__container,
-    .hotels__container,
-    .restaurants__container {
-        grid-template-columns: repeat(3, 18rem);
-    }
-
-    .feature__item img,
-    .hotels__item img,
-    .restaurants__item img {
-        height: 12rem;
-    }
-
-    .partners__container {
-        justify-content: center;
-        gap: 1.5rem;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 912px) {
-    .header {
-        padding: 0 1rem;
-    }
-
-    i.header__menu {
-        color: white;
-        display: block;
-        font-size: x-large;
-    }
-
-    .header__navbar {
-        display: none;
-    }
-
-    .header__search {
-        width: 40%;
-    }
-
-    .container {
-        height: 20rem;
-    }
-
-    .container__image__content h1 {
-        font-size: x-large;
-    }
-
-    .container__image__content h3 {
-        font-size: large;
-    }
-
-    .feature {
-        padding: 3rem 0 0;
-    }
-
-    .feature__container,
-    .hotels__container,
-    .restaurants__container {
-        grid-template-columns: repeat(2, 20rem);
-    }
-
-    .filter__container {
-        flex-wrap: wrap;
-    }
-
-    .filter__container .filter__inputs {
-        flex: 0 0 40%;
-    }
-
-    .hotels__container {
-        padding: 5rem 0 0;
-    }
-
-    .cuisines,
-    .restaurants,
-    .travel {
-        padding: 5rem 0 0;
-    }
-
-    .cuisines__grid {
-        grid-template-columns: repeat(3, 10rem);
-    }
-
-    .travel__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .partners__container {
-        flex-wrap: wrap;
-    }
-
-    .partners__image {
-        flex: 0 0 50%;
-    }
-
-    .footer__container {
-        flex-wrap: wrap;
-    }
-
-    .footer__trip,
-    .footer__explore,
-    .footer__about,
-    .footer__support {
-        padding: 1rem 4rem 1rem;
-        flex: 0 0 40%;
-    }
-
-    .footer__trip p {
-        font-size: medium;
-    }
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
 }
 
-@media screen and (max-width: 576px) {
-    .header__logo {
-        padding-right: 0.5rem;
-    }
+/* Utility Classes */
 
-    .header__title {
-        font-size: small;
-    }
+.align-center {
+    display: flex;
+    align-items: center;
+}
 
-    .header__search {
-        display: none;
-    }
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .feature__container {
-        padding: 3rem 0 0;
-    }
+.fixed__gap {
+    width: 100%;
+    padding: 2rem 0;
+    color: transparent;
+    background-color: white;
+}
 
-    .feature__container,
-    .hotels__container,
-    .restaurants__container {
-        padding: 3rem 0 0;
-        grid-template-columns: repeat(1, 20rem);
-    }
+/* Customized Styling */
 
-    .filter__container .filter__inputs {
-        flex: 0 0 30%;
-    }
+:root {
+    --primary-green: #00EB5B;
+    --border-grey: #DFE1DF;
+    --dark-green: #143C24;
+}
 
-    .hotels {
-        padding: 5rem 0 0;
-    }
+/* Header */
 
-    .cuisines {
-        padding: 8rem 0 0;
-    }
+.header {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    gap: 0.25rem;
+    z-index: 100;
+    background-color: white;
+}
 
-    .cuisines__grid {
-        grid-template-columns: repeat(2, 10rem);
-    }
+.header__laptop {
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
 
-    .cuisines__grid__item,
-    .travel__grid__item {
-        padding: 1rem;
-    }
+.header__logo {
+    gap: 0.75rem;
+    height: 100%;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+}
 
-    .travel__grid__item h3,
-    .travel__grid__item p {
-        font-size: small !important;
-    }
+.header__logo__image {
+    height: 75%;
+}
 
-    .partners__container img {
-        flex: 1 0 75%;
-    }
+.header__search.align-center {
+    gap: 0.75rem;
+    width: 40%;
+    height: 70%;
+    padding: 0.5rem 0.25rem 0.5rem 0.5rem;
+    border: 1px solid var(--border-grey);
+    border-radius: 2rem;
+}
 
-    .footer__container {
-        padding: 0 0 3rem;
-        gap: 1rem;
-        flex-direction: row;
-        justify-content: center;
-    }
+span.search {
+    width: 1rem;
+}
 
-    .footer__trip {
-        flex: 0 0 80% !important;
-    }
+.header__search input {
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1 0 60% !important;
+}
 
-    .flex__trip p {
-        width: 20rem !important;
-        font-size: small;
-    }
+.header__search__button,
+.header__login,
+.find__hotels,
+.explore__restaurants,
+.filter__button {
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    font-size: medium;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-green);
+}
 
-    .footer__explore,
-    .footer__about,
-    .footer__support {
-        padding: 1rem;
-        flex: 0 0 30%;
-        font-size: small;
-    }
+.header__navbar {
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+}
 
-    .footer__trip p {
-        font-size: medium;
-    }
+.header__navbar a,
+.header__mobile a {
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.header__navbar a:hover {
+    background-color: var(--border-grey);
+}
+
+.header__mobile {
+    width: 100%;
+    display: none;
+    background-color: white;
+}
+
+.header__login,
+.find__hotels,
+.explore__restaurants,
+.filter__button {
+    color: white;
+    background-color: var(--dark-green);
+}
+
+.header__gap {
+    width: 100%;
+    min-height: 10%;
+}
+
+.intro {
+    padding: 2.5rem 8rem 3rem;
+}
+
+.intro__contents {
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--primary-green);
+}
+
+.intro__image {
+    height: 30rem;
+    position: relative;
+    flex: 0 0 50%;
+    border-radius: 1.5rem;
+}
+
+.intro__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+}
+
+.photographer {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: smaller;
+    font-weight: 600;
+    background-color: var(--primary-green);
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+}
+
+.intro__line {
+    min-width: 1px;
+    min-height: 30rem;
+    border: 1px solid black;
+}
+
+.intro__text {
+    gap: 2rem;
+    height: 30rem;
+    flex: 0 0 45%;
+    flex-direction: column;
+}
+
+.intro__text h1,
+.intro__text h3 {
+    text-align: center;
+    font-weight: 600;
+}
+
+span.intro__text__buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Featured Destinations */
+.feature {
+    width: 100vw;
+}
+
+.feature__container,
+.hotels__container,
+.restaurants__container {
+    padding: 5rem 0 0;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 25rem);
+}
+
+.feature__item img,
+.hotels__item img,
+.restaurants__item img {
+    width: 100%;
+    height: 15rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.feature__item,
+.hotels__item,
+.restaurants__item {
+    color: white;
+    background-color: var(--card-background);
+    border: none;
+    border-radius: 1rem;
+    transition: scale 300ms ease-in-out;
+}
+
+.feature__item:hover,
+.hotels__item:hover,
+.restaurants__item:hover {
+    scale: 1.025;
+    transition: 300ms ease-in-out;
+}
+
+.feature__item__content,
+.hotels__item__content,
+.restaurants__item__content {
+    background-color: var(--dark-green);
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 2rem 0.5rem;
+    padding-right: 1rem;
+}
+
+.feature__rating,
+.hotels__rating,
+.restaurants__rating {
+    color: gold;
+}
+
+.feature__rating p,
+.hotels__rating p,
+.restaurants__rating p {
+    padding: 0 0.5rem;
+    font-size: medium !important;
+    font-weight: 400 !important;
+}
+
+.feature__item__content p,
+.hotels__item__content p,
+.restaurants__item__content p {
+    font-size: small;
+    font-weight: 100;
+}
+
+.feature__item__content h4 {
+    color: var(--primary-color);
+}
+
+/* Title Styles */
+.feature__title,
+.filter__title,
+.hotels__title,
+.restaurants__title,
+.travel__title,
+.cuisines__title,
+.partners__title {
+    margin: auto;
+    width: fit-content;
+}
+
+/* Underline Styles */
+.feature__underline,
+.filter__underline,
+.hotels__underline,
+.restaurants__underline,
+.travel__underline,
+.cuisines__underline,
+.partners__underline {
+    margin: auto;
+    width: fit-content;
+    color: transparent;
+    font-size: xx-small;
+    border-bottom: 5px solid var(--dark-green);
+}
+
+/* Filter Section */
+.filter {
+    width: 100%;
+    padding: 0 3rem 3rem;
+    flex-direction: column;
+}
+
+.filter__container.flex-center {
+    width: 100%;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.filter__inputs {
+    display: block;
+    flex: 0 0 20%;
+}
+
+.filter__inputs div {
+    padding-top: 1rem;
+}
+
+.filter__inputs input,
+.filter__inputs select {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+    background-color: transparent;
+    border: 1px solid var(--dark-green);
+}
+
+.filter__inputs select option {
+    color: black;
+}
+
+.filter__inputs.alignment {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter__inputs.alignment input {
+    margin: 0;
+}
+
+.filter__inputs.alignment div {
+    padding: 0;
+}
+
+.filter__button {
+    margin: 1rem 0 0;
+}
+
+/* Travel Modes */
+.travel__title {
+    padding: 0;
+}
+
+.travel__grid,
+.cuisines__grid {
+    display: grid;
+    align-items: center;
+    padding: 3rem 0;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.travel__grid {
+    padding: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: stretch;
+}
+
+.cuisines__grid {
+    grid-template-columns: repeat(5, 10rem);
+}
+
+.travel__grid__item,
+.cuisines__grid__item {
+    color: white;
+    gap: 0.5rem;
+    padding: 3rem 2rem;
+    flex-direction: column;
+    border-radius: 1rem;
+    transition: 300ms ease-in-out;
+    background-color: var(--dark-green);
+}
+
+.cuisines__grid__item {
+    padding: 2rem !important;
+}
+
+.travel__grid__item i,
+.cuisines__grid__item i {
+    color: var(--primary-color);
+    font-size: xxx-large;
+}
+
+.travel__grid__item h3,
+.cuisines__grid__item h3 {
+    margin-top: 2rem;
+}
+
+.travel__grid__item p {
+    text-align: center;
+    font-size: medium;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.travel__grid__item:hover,
+.cuisines__grid__item:hover,
+.partners__image:hover {
+    transform: translateY(-1rem);
+    transition: 300ms ease-in-out;
+}
+
+/* Travel Partners */
+.partners {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+
+.partners__container {
+    margin: 3rem 0 0;
+    padding: 3rem 0;
+    gap: 3rem;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    background-color: var(--dark-green);
+}
+
+.partners__image {
+    max-width: 18rem;
+    height: 10rem;
+    padding: 1rem;
+    object-fit: contain;
+    border-radius: 1rem;
+    background-color: white;
+    transition: 300ms ease-in-out;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+}
+
+.footer__container {
+    width: 100%;
+    gap: 3rem;
+}
+
+.footer__container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.footer__trip,
+.footer__explore,
+.footer__about,
+.footer__support {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    flex: 0 0 18%;
+}
+
+.footer__trip p {
+    padding: 1.25rem;
+    width: 10rem;
+    font-size: small;
+    font-weight: 100 !important;
+}
+
+.footer__trip .icons {
+    display: flex;
+    gap: 1rem;
+    font-size: large !important;
+}
+
+.footer__container li:hover,
+.footer__container i:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer__container i:hover {
+    text-decoration: none;
+}
+
+.footer__copyright {
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    align-content: center;
 }

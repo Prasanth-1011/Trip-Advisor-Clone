@@ -1,0 +1,216 @@
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .header__search.align-center {
+        width: 30%;
+    }
+
+    .header__search__button {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .header__navbar {
+        display: none;
+    }
+
+    .header__mobile {
+        display: flex;
+    }
+
+    .header__search {
+        width: 50% !important;
+    }
+
+    .intro {
+        margin-top: 1rem;
+        padding: 2.5rem 5rem 3rem;
+    }
+
+    .intro__text h1,
+    .intro__text h3 {
+        width: 80%;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .feature__container,
+    .hotels__container,
+    .restaurants__container {
+        grid-template-columns: repeat(3, 18rem);
+    }
+
+    .feature__item img,
+    .hotels__item img,
+    .restaurants__item img {
+        height: 12rem;
+    }
+
+    .partners__container {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    span.intro__line {
+        display: none;
+    }
+
+    .intro__contents {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .feature__container,
+    .hotels__container,
+    .restaurants__container {
+        grid-template-columns: repeat(2, 20rem);
+    }
+
+    .filter__container {
+        flex-wrap: wrap;
+    }
+
+    .filter__container .filter__inputs {
+        flex: 0 0 40%;
+    }
+
+    .cuisines__grid {
+        grid-template-columns: repeat(3, 10rem);
+    }
+
+    .travel__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners__container {
+        flex-wrap: wrap;
+    }
+
+    .partners__image {
+        flex: 0 0 50%;
+    }
+
+    .footer__container {
+        flex-wrap: wrap;
+    }
+
+    .footer__trip,
+    .footer__explore,
+    .footer__about,
+    .footer__support {
+        padding: 1rem 4rem 1rem;
+        flex: 0 0 40%;
+    }
+
+    .footer__trip p {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header__laptop {
+        justify-content: space-around;
+    }
+
+    .header__search__button {
+        display: none;
+    }
+
+    .header h2 {
+        display: none;
+    }
+
+    .header__mobile {
+        font-size: small;
+    }
+
+    .intro {
+        padding: 3rem;
+    }
+
+    .intro__contents {
+        padding: 3rem 3rem 0;
+        padding-bottom: 0;
+        height: 30rem;
+    }
+
+    .intro__text {
+        gap: 0.5rem;
+        padding: 1rem 0
+    }
+
+    .intro__text__buttons {
+        scale: 0.6;
+    }
+
+    .intro__text h1,
+    .intro__text h3 {
+        font-size: large;
+        font-weight: 500;
+    }
+
+    .intro__text h3 {
+        font-size: small;
+    }
+
+    .feature__container,
+    .hotels__container,
+    .restaurants__container {
+        padding: 3rem 0 0;
+        grid-template-columns: repeat(1, 20rem);
+    }
+
+    .filter__container .filter__inputs {
+        flex: 0 0 30%;
+    }
+
+    .hotels {
+        padding: 5rem 0 0;
+    }
+
+    .cuisines {
+        padding: 8rem 0 0;
+    }
+
+    .cuisines__grid {
+        grid-template-columns: repeat(2, 10rem);
+    }
+
+    .cuisines__grid__item,
+    .travel__grid__item {
+        padding: 1rem;
+    }
+
+    .travel__grid__item h3,
+    .travel__grid__item p {
+        font-size: small !important;
+    }
+
+    .partners__container img {
+        flex: 1 0 75%;
+    }
+
+    .footer__container {
+        padding: 0 0 3rem;
+        gap: 1rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer__trip {
+        flex: 0 0 80% !important;
+    }
+
+    .footer__explore,
+    .footer__about,
+    .footer__support {
+        padding: 1rem;
+        flex: 0 0 30%;
+        font-size: small;
+    }
+
+    .footer__trip p {
+        font-size: medium;
+    }
+}
