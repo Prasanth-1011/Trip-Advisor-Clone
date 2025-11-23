@@ -32,7 +32,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 912px) {
     .header {
         padding: 0 1rem;
     }
@@ -124,7 +124,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
     .header__logo {
         padding-right: 0.5rem;
     }
@@ -137,8 +137,7 @@
         display: none;
     }
 
-    .feature__container,
-    .cuisines {
+    .feature__container {
         padding: 3rem 0 0;
     }
 
@@ -153,6 +152,14 @@
         flex: 0 0 30%;
     }
 
+    .hotels {
+        padding: 5rem 0 0;
+    }
+
+    .cuisines {
+        padding: 8rem 0 0;
+    }
+
     .cuisines__grid {
         grid-template-columns: repeat(2, 10rem);
     }
@@ -165,6 +172,10 @@
     .travel__grid__item h3,
     .travel__grid__item p {
         font-size: small !important;
+    }
+
+    .partners__container img {
+        flex: 1 0 75%;
     }
 
     .footer__container {

@@ -25,6 +25,13 @@
     justify-content: center;
 }
 
+.fixed__gap {
+    width: 100%;
+    padding: 2rem 0;
+    color: transparent;
+    background-color: var(--primary-background);
+}
+
 /* Base Syles */
 html,
 body {
@@ -181,7 +188,7 @@ i.header__menu {
 /* Main */
 .container {
     width: 100vw;
-    height: 40rem;
+    height: 100%;
     position: relative;
 }
 
@@ -283,16 +290,12 @@ i.header__menu {
 /* Featured Destinations */
 .feature {
     width: 100vw;
-    padding: 8rem 0 0;
-}
-
-.feature__container {
-    padding: 5rem 0 0;
 }
 
 .feature__container,
 .hotels__container,
 .restaurants__container {
+    padding: 5rem 0 0;
     display: grid;
     gap: 2rem;
     align-items: center;
@@ -369,13 +372,6 @@ i.header__menu {
     background-color: var(--card-background);
 }
 
-.filter__gap {
-    width: 100%;
-    padding: 2rem 0;
-    color: transparent;
-    background-color: var(--primary-background);
-}
-
 .filter__container.flex-center {
     width: 100%;
     gap: 2rem;
@@ -427,22 +423,7 @@ i.header__menu {
     margin: 1rem 0 0;
 }
 
-/* Popular Hotels */
-.hotels {
-    padding: 5rem 0;
-}
-
-/* Restaurants */
-.restaurants__container {
-    padding: 5rem 0 0;
-}
-
 /* Travel Modes */
-.travel,
-.cuisines {
-    padding: 8rem 0rem 0rem;
-}
-
 .travel__title {
     padding: 0;
 }
